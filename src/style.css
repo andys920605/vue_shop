@@ -1,4 +1,7 @@
-
+.container_footer{
+    width: 100%;
+    background: #FFDCDC;
+}
 .card-img-top:hover {
     opacity: 0.75;
 }
@@ -154,4 +157,67 @@ p {
     height: 30px;
     margin: 0 10px;
     background-color: black;
+}
+/* .footer_main{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.footer_icon_link{
+    width: 200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid teal;
+    margin-top: 50px;
+}
+.footer_text_link{
+    list-style: none;
+    display: flex;
+    width: 500px;
+    border: 1px solid yellow;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.footer_text_link a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    border-right: 2px solid rgb(28, 28, 24);
+    padding-right: 15px; /* 在<a>標籤右側創建10px的空間 */
+    position: relative;
+}
+.footer_text_link a::after{
+    content: "";
+    position: absolute;
+    bottom: -2px; /* 距離文字底部的距離 */
+    left: 0;
+    width: 0; /* 初始寬度為0 */
+    height: 2px; /* 底線高度 */
+    background-color: white; /* 底線顏色 */
+    transition: width 0.5s ease-in-out; /* 寬度變化的動畫效果，時間可自行調整 */
+}
+/* 滑鼠懸停時底線特效 */
+.footer_text_link a:hover::after {
+    width: 70%; /* 寬度為100%，即完整的底線 */
+  }
+li:last-child a.special_link {
+    border-right: none; 
+}
+.bottom_logo{
+    list-style: none;
+}
+.bottom_logo_img{
+    margin-top: 15px;
+    width: 238px;
+    height: 109px;
+}
+.footer_text li {
+    color: #999494;
+    list-style: none;
+    font-size: 17px;
+}
+.footer_text p{
+    font-size: 17px;
 }
