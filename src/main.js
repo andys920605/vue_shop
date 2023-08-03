@@ -1,11 +1,20 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import router from './router'
-import "bootstrap/dist/css/bootstrap.min.css"
+import Router from './router'
+import PrimeVue from 'primevue/config';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-createApp(App).use(router).mount('#app')
 
-import "bootstrap/dist/js/bootstrap.min.js"
+const app = createApp(App);
+app.use(Router);
+app.use(PrimeVue);
+app.mount('#app');
+
+
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
