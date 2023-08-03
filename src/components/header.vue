@@ -1,15 +1,16 @@
 <template>
-    <div class="container custom-container">
-        <div class="col-xl-12 m-auto">
+    <!-- 中秋節禮盒滿三千送三百 -->
+    <div class=" nav-item  ">
+        <div class="m-auto container-fluid the_top">
             <a href="#" style="color:black; text-decoration:none;font-weight: bold;">中秋禮盒商品 滿3000送300</a>
         </div>
     </div>
 
     <div>
-        <img src="../assets/img/No_name_dessert.png" class="img-fluid m-auto">
+        <img src="../assets/img/No_name_dessert.png" class="img-fluid m-auto w-25 ">
     </div>
 
-    <nav class="navbar  navbar-expand-lg bg-body-tertiary ">
+    <nav class="navbar  navbar-expand-lg">
         <div class="container-fluid justify-content: center; /* 水平置中 */
         align-items: center;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -49,3 +50,27 @@
         </div>
     </nav>
 </template>
+
+<style lang="css" scoped>
+    .the_top{
+    display: flex;
+    justify-content: center;
+    background-color: #FDBBBB;
+    text-decoration: none;
+    top: 0;
+    }
+
+    .nav-link a{ 
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .img-fluid {
+    max-width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    justify-content: center;
+    /* Horizontally center the content inside the container */
+    display: flex;
+}
+</style>
