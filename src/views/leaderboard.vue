@@ -1,28 +1,43 @@
+<script setup>
+  import Modal from '../components/Modal.vue';
+</script>
+
+
 <template>
     <div>
-      <Button label="打開模態框" @click="showModal" />
-      <ModalComponent :content="modalContent" :visible="isModalVisible" @update:visible="isModalVisible = $event" />
+      <Button label="查看商品" @click="showModal" />
+      <ProductModal :product="selectedProduct" :visible="isModalVisible" @update:visible="isModalVisible = $event" @order="handleOrder" />
     </div>
-  </template>
+    <Modal />
+</template>
   
   <script>
-  import ModalComponent from '../components/ModalComponent.vue';
-  import Button from 'primevue/button'; // 正確的導入語句
+  import ProductModal from '../components/ProductModal.vue';
+  import Button from 'primevue/button';
   
   export default {
     components: {
-      ModalComponent,
+      ProductModal,
       Button
     },
     data() {
       return {
-        modalContent: '這是模態框的內容',
+        selectedProduct: {
+          title: '精美產品',
+          description: '這是一個非常精美的產品介紹。',
+          price: 399,
+          image: 'http://localhost:8080/api/product/4/image', // 圖片的URL
+        },
         isModalVisible: false,
       };
     },
     methods: {
       showModal() {
         this.isModalVisible = true;
+      },
+      handleOrder(product) {
+        // 處理下單邏輯
+        console.log('下單產品:', product);
       }
     },
   };

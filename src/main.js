@@ -4,7 +4,7 @@ import App from './App.vue'
 import Router from './router'
 import PrimeVue from 'primevue/config';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "primevue/resources/themes/lara-light-indigo/theme.css";
 
 
 
