@@ -26,7 +26,7 @@
           title: '精美產品',
           description: '這是一個非常精美的產品介紹。',
           price: 399,
-          image: 'http://localhost:8080/api/product/4/image', // 圖片的URL
+          image: 'https://www.rosacake.com/image/cache/data/MACARON-720x720.jpg', // 圖片的URL
         },
         isModalVisible: false,
       };
