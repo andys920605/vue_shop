@@ -65,6 +65,10 @@
     color:white;
 }
 
+.fa-brands:active{
+    color:#FB7B7B;
+}
+
 
 
 
@@ -79,6 +83,11 @@
 }
 
 
+
+
+
+
+
 /*-----關於我們---------------*/
 .footer_text_link a{
     color: #000;
@@ -86,15 +95,15 @@
     font-weight: bolder;
     font-size: 20px;
     border-right: 2px solid rgb(28, 28, 24);
-    padding-right: 15px; /* 在<a>標籤右側創建10px的空間 */
+    padding-right: 15px; 
 }
 
 .footer_text_link a:hover{
     color : #ffffff;
 }
-
-
-
+.footer_text_link a:active{
+    color:#FB7B7B;
+}
 
 
 li:last-child a.special_link {

@@ -2,6 +2,27 @@
     <div class="card container-fluid">
         <!----gx 跟gy為水平跟垂直距離-後面數字的是調整距離------------->
         <div class="card-body row justify-content-between gx-2 gy-3">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item over">
+                            <a class="nav-link active" aria-current="page" href="#">商品訂購</a>
+                        </li>  
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">乳酪蛋糕</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
             <div class="" style="width: 18rem;">
                 <div class="img">
                     <img src="../assets/img/unsplash_G4bhjIpUq9g.png" class="card-img-top" alt="...">
@@ -230,17 +251,24 @@
     </div>
 </template>
 
+
+
+
 <style lang="css" scoped>
 
 
+/*----------商品訂購< 乳酪蛋糕---------------------------------------*/
+.over ::after{
+    content: " <";
+}
 
-/* 婉瑜-修改加入購物車商品頁面 */
+
+
+/* ---------婉瑜-修改加入購物車商品頁面---------- */
 
 .card-img-top:hover {
     opacity: 0.75;
 }
-
-
 
 
 
@@ -314,7 +342,7 @@
 }
 
 
-/*----分頁器--------*/
+/*----分頁器----------------------------------------*/
 .pagination .page-link.active {
     color: #FDBBBB;
     border: none;
@@ -343,18 +371,6 @@ p {
 .navbar-expand-lg {
     color: #FDBBBB;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

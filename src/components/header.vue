@@ -52,6 +52,7 @@
 </template>
 
 <style lang="css" scoped>
+
     .the_top{
     display: flex;
     justify-content: center;
@@ -59,12 +60,14 @@
     text-decoration: none;
     top: 0;
     }
-
     .nav-link a{ 
         text-decoration: none;
         color: inherit;
     }
 
+    .navbar-collapse ul {
+    width: 100%;
+}
     .img-fluid {
     max-width: 100%;
     height: 20vh;
