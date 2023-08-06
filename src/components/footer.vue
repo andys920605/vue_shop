@@ -3,7 +3,6 @@
 
         <footer class="d-flex flex-column flex-wrap justify-content-center align-items-center ">
 
-
             <!-- footer navigation -->
             <ul class="footer_icon_link">
                 <li>
@@ -48,3 +47,78 @@
         </footer>
     </div>
 </template>
+
+
+
+
+<style lang="css" scoped>
+.footer_icon_link{
+    width: 200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.fa-brands:hover{
+    color:white;
+}
+
+
+
+
+
+.footer_text_link{
+    list-style: none;
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* border:1px solid red; */
+}
+
+
+/*-----關於我們---------------*/
+.footer_text_link a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    border-right: 2px solid rgb(28, 28, 24);
+    padding-right: 15px; /* 在<a>標籤右側創建10px的空間 */
+}
+
+.footer_text_link a:hover{
+    color : #ffffff;
+}
+
+
+
+
+
+li:last-child a.special_link {
+    border-right: none; 
+}
+.bottom_logo{
+    list-style: none;
+}
+.bottom_logo_img{
+    margin-top: 15px;
+    width: 238px;
+    height: 109px;
+}
+.footer_text li {
+    color: #999494;
+    list-style: none;
+    font-size: 17px;
+}
+.footer_text p{
+    font-size: 17px;
+}
+.container_footer{
+    width: 100%;
+    background: #FFDCDC;
+}
+
+</style>
