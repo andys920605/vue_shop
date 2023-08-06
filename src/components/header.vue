@@ -67,7 +67,7 @@
 
     .navbar-collapse ul {
     width: 100%;
-}
+    }
     .img-fluid {
     max-width: 100%;
     height: 20vh;
@@ -75,5 +75,5 @@
     justify-content: center;
     /* Horizontally center the content inside the container */
     display: flex;
-}
+    }
 </style>
