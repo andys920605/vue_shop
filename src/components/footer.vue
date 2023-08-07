@@ -69,10 +69,6 @@
     color:#FB7B7B;
 }
 
-
-
-
-
 .footer_text_link{
     list-style: none;
     display: flex;
@@ -81,12 +77,6 @@
     margin-top: 20px;
     /* border:1px solid red; */
 }
-
-
-
-
-
-
 
 /*-----關於我們---------------*/
 .footer_text_link a{
@@ -104,7 +94,6 @@
 .footer_text_link a:active{
     color:#FB7B7B;
 }
-
 
 li:last-child a.special_link {
     border-right: none; 
