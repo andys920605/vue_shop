@@ -1,0 +1,40 @@
+
+// 按鈕樣式(沒有效果的按鈕)
+@mixin btn($color-primary,$color-black,$h4){
+    border-color:$color-primary;
+    color: $color-text;
+    font-size: $h4;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer ;
+}
+
+// 滑過按鈕樣式(hover)
+@mixin hoverbtn($color-primary,$color-black,$h4,$hover){
+    border-color:$color-primary;
+    color: $color-text;
+    font-size: $h4;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer ;
+    &:hover{
+        background: $color-primary;
+    }
+}
+// 點擊按鈕樣式(active)
+@mixin activebtn($color-primary,$color-black,$h4,$active){
+    border-color:$color-primary;
+    color: $color-text;
+    font-size: $h4;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer ; 
+    &:active{
+        background:$color-tertiary;
+    }
+}

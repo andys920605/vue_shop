@@ -1,0 +1,37 @@
+// ------- 全域變數global------------- //
+
+// 全網
+*{
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+
+// 顏色設定
+$color-primary: #FDBBBB;
+$color-secondary: #FFDCDC;
+$color-tertiary: #FB7B7B;
+$color-text: #000000;
+$color-white: #FFFFFF;
+$color-gray: #B4B1B1;
+
+
+//字體大小
+$h1: 40px;
+$h2: 32px;
+$h3: 28px;
+$h4: 25px;
+$p: 20px;
+
+// 陰影
+$shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+
+// 字體大小
+
+h1{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.5em;
+}
+// icon
+$icon-facebook: "fa-brands fa-facebook";
+
