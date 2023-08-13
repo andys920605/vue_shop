@@ -258,6 +258,13 @@
 
 
 /*----------商品訂購< 乳酪蛋糕---------------------------------------*/
+
+
+
+
+
+
+
 .over ::after{
     content: " <";
 }
@@ -343,6 +350,13 @@
 
 
 /*----分頁器----------------------------------------*/
+
+
+.pagination .page-link{
+    border: none;
+    background-color: white;
+    text-decoration: none;
+}
 .pagination .page-link.active {
     color: #FDBBBB;
     border: none;
@@ -365,7 +379,7 @@
 
 p {
     font-size: 14px;
-    /* color: #b4b1b1; */
+
 }
 
 .navbar-expand-lg {
