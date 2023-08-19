@@ -1,5 +1,9 @@
 // ------- 全域變數global------------- //
 
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/mixins.scss';
+
+
 // 全網
 *{
     font-family: "Noto Sans TC", sans-serif;
@@ -33,5 +37,7 @@ h1{
     line-height: 1.5em;
 }
 // icon
-$icon-facebook: "fa-brands fa-facebook";
+// $icon-facebook: "fa-brands fa-facebook";
 
+
+// 後臺共用設定

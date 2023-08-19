@@ -1,40 +1,44 @@
 
-// 按鈕樣式(沒有效果的按鈕)
-@mixin btn($color-primary,$color-black,$h4){
-    border-color:$color-primary;
-    color: $color-text;
-    font-size: $h4;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer ;
-}
+// 版面中間為1200px(1920px)
+// 如何設置
 
-// 滑過按鈕樣式(hover)
-@mixin hoverbtn($color-primary,$color-black,$h4,$hover){
+// 按鈕樣式(沒有效果的按鈕)
+@mixin btn($color-primary,$color-text,$h4){
     border-color:$color-primary;
     color: $color-text;
     font-size: $h4;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
-    transition: .3s;
     cursor: pointer ;
+    width: 300px;
+    // border: 1px solid salmon;
+
     &:hover{
         background: $color-primary;
     }
-}
-// 點擊按鈕樣式(active)
-@mixin activebtn($color-primary,$color-black,$h4,$active){
-    border-color:$color-primary;
-    color: $color-text;
-    font-size: $h4;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
-    transition: .3s;
-    cursor: pointer ; 
+    
     &:active{
-        background:$color-tertiary;
+        background: $color-primary;
+    }
+
+    &.-active{
+        // background:black
     }
 }
+
+// // RWD
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+
+// wrapper 中間設定1200px
+@mixin wrapper() {
+    width: 1200px;
+    margin: 0 auto;
+}
+
