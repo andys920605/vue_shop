@@ -4,235 +4,56 @@
         <div class="card-body row justify-content-between gx-2 gy-3">
 
             <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item over">
-                            <a class="nav-link active" aria-current="page" href="#">商品訂購</a>
-                        </li>  
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item over">
+                                <a class="nav-link active" aria-current="page" href="#">商品訂購</a>
+                            </li>  
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">乳酪蛋糕</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-
-
-
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_G4bhjIpUq9g.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-
-                    <!-- Modal (彈窗)-->
-                    <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">乳酪蛋糕</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="description">
-                    <p class="card-text text-center">檸檬佐可可乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-
-            </div>
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_LdLI47dOZUU.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">生莓果乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_7JYVKRo7i5Q.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">焦糖蘋果乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_GAauSStia3s.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">泰奶可可脆片乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_EbRBhZ-I_p8.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">藍莓生乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-
+            </nav>
             
-            <div class="" style="width: 18rem;">
+            <div v-for="product in products" :key="product.id" style="width: 18rem;">
                 <div class="img">
-                    <img src="../assets/img/unsplash_JBIK4QZOFfc.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <img :src="product.photos?.url || 'fallback-image.png'" class="card-img-top" alt="...">
+                    <button type="button" class="caption" data-bs-toggle="modal" :data-bs-target="'#exampleModal1'">
                         加入購物車
                     </button>
                 </div>
 
                 <div class="description">
-                    <p class="card-text text-center">黑森林乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
+                    <p class="card-text text-center">{{ product.name }}</p>
+                    <p class="card-text text-center price">NT{{ product.specs[0].price }}</p>
                 </div>
-            </div>
+            </div> 
 
-            
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_7JYVKRo7i5Q.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
+
+
+        </div>
+    </div>
+
+    <!-- Modal (彈窗)-->
+    <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
-
-                <div class="description">
-                    <p class="card-text text-center">焦糖蘋果乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
+                <div class="modal-body">
+                    ...
                 </div>
-            </div>
-
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_GAauSStia3s.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">泰奶可可脆片乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-            
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_EbRBhZ-I_p8.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">藍莓生乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-
-            
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_JBIK4QZOFfc.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">黑森林乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-            
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_7JYVKRo7i5Q.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">焦糖蘋果乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
-                </div>
-            </div>
-
-
-            <div class="" style="width: 18rem;">
-                <div class="img">
-                    <img src="../assets/img/unsplash_GAauSStia3s.png" class="card-img-top" alt="...">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="caption" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                        加入購物車
-                    </button>
-                </div>
-
-                <div class="description">
-                    <p class="card-text text-center">泰奶可可脆片乳酪</p>
-                    <p class="card-text text-center price">NT300</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -250,6 +71,31 @@
         </ul>
     </div>
 </template>
+
+<script>
+    import { ref, onMounted } from 'vue'
+    import axios from 'axios'  
+
+    export default {
+    setup() {
+        const products = ref([]);
+
+        onMounted(async () => {
+        try {
+            const response = await axios.get('http://54.199.12.7:8686/api/products?category_id=1');
+            if (response.status === 200) {
+                console.log(response.data);
+                products.value = response.data;
+            }
+        } catch (error) {
+            console.error(error);
+        }
+        });
+
+        return { products };
+    }
+    }
+</script>
 
 
 
