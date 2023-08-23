@@ -1,7 +1,7 @@
 <template>
     <div class="card container-fluid">
         <!----gx 跟gy為水平跟垂直距離-後面數字的是調整距離------------->
-        <div class="card-body row justify-content-between gx-2 gy-3">
+        <div class="card-body row  gx-2 gy-3">
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -19,7 +19,7 @@
                 </div>
             </nav>
             
-            <div v-for="product in products" :key="product.id" style="width: 18rem;">
+            <div v-for="product in products" :key="product.id" style="width: 18rem;" class="product">
                 <div class="img">
                     <img :src="product.photos?.url || 'fallback-image.png'" class="card-img-top" alt="...">
                     <button type="button" class="caption" data-bs-toggle="modal" :data-bs-target="'#exampleModal1'">
@@ -106,11 +106,6 @@
 /*----------商品訂購< 乳酪蛋糕---------------------------------------*/
 
 
-
-
-
-
-
 .over ::after{
     content: " <";
 }
@@ -122,13 +117,35 @@
 .card-img-top:hover {
     opacity: 0.75;
 }
+.container-fluid{
+    margin: 0 auto;
+}
 
+
+.product{
+    /* 左右分配 */
+    /* flex-grow: 1;第二排平均分配 */
+    margin-left: 1.1%;
+
+}
 
 
 .img {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 60%;
+    /* object-position: center center; */
+    display: block;
+
+}
+
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    margin: auto 0;
 }
 
 .caption {
