@@ -1,5 +1,5 @@
 <template> 
-   
+    <div>
         <div class="card container-fluid">
             <!----gx 跟gy為水平跟垂直距離-後面數字的是調整距離------------->
             <div class="card-body row  gx-2 gy-3">
@@ -17,7 +17,7 @@
                                 </li>
                             </ul>
                         </div>
-                    
+                    </div>
                 </nav>
                 
 
@@ -129,13 +129,7 @@
 }
 
 
-.product{
-    /* 左右分配 */
-    /* flex-grow: 1;第二排平均分配 */
 
-    /* margin-left: 1.1%; */
-
-}
 
 
 .img {
