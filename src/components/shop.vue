@@ -19,7 +19,11 @@
                 </div>
             </nav>
             
-            <div v-for="product in products" :key="product.id" style="width: 18rem;">
+            <div v-for="product in products" 
+            :key="product.id" 
+            style="width: 18rem;"
+            @click="OpenModal"
+            >
                 <div class="img">
                     <img :src="product.photos?.url || 'fallback-image.png'" class="card-img-top" alt="...">
                     <button type="button" class="caption" data-bs-toggle="modal" :data-bs-target="'#exampleModal1'">
@@ -38,8 +42,12 @@
         </div>
     </div>
 
+
+      <Modal :showFlag="showFlag" @closeModal="closeModal" />
+
+
     <!-- Modal (彈窗)-->
-    <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -57,7 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="container mt-3 ">
@@ -72,15 +80,15 @@
     </div>
 </template>
 
-<script>
-    import { ref, onMounted } from 'vue'
-    import axios from 'axios'  
+<script setup>
 
-    export default {
-    setup() {
-        const products = ref([]);
+    import { ref, onMounted,  } from 'vue'
+    import axios from 'axios'
+    import Modal from './Modal.vue'
+    
+    const products = ref([]);
 
-        onMounted(async () => {
+    onMounted(async () => {
         try {
             const response = await axios.get('http://54.199.12.7:8686/api/products?category_id=1');
             if (response.status === 200) {
@@ -90,17 +98,33 @@
         } catch (error) {
             console.error(error);
         }
-        });
-
         return { products };
+        
+    });
+
+    
+    const showFlag = ref(false);
+    // console.log(showFlag.value);
+    const OpenModal= () => {
+        showFlag.value = true;
+        console.log(showFlag.value);
     }
+
+    const closeModal= () => {
+        showFlag.value = false;
     }
+
+    
+
 </script>
 
 
 
 
-<style lang="css" scoped>
+
+
+
+<style lang="scss" scoped>
 
 
 /*----------商品訂購< 乳酪蛋糕---------------------------------------*/
