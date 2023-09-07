@@ -1,5 +1,5 @@
 <template>
-   <header>
+  <header>
         <div class="header-title">
           歡迎來到甜點店
         </div>
