@@ -1,6 +1,6 @@
 <template>
 <div class="card flex justify-content-center" v-if="show.required">
-    <Button label="Show" icon="pi pi-external-link" @click="visible = true" />
+    <Button label="加入購物車" icon="pi pi-external-link" @click="visible = true" />
     <Dialog v-model:visible="visible" modal header="Header" :style="{ width: '1400px' }">
     <div class="container" >
 
