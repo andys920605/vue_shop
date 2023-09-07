@@ -1,7 +1,7 @@
-<!-- 新增商品頁面 -->
+<!-- 後台新增商品頁面 -->
 
 <template>
-    <Header/>
+    <!-- <Header/> -->
     <div>
         <h4>新增商品</h4>
         <hr style="width: 80%;margin: auto;">
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-    import Header  from '../components/Header.vue'
+    // import Header  from '../components/Header.vue'
     import Newpic from '../components/product/newpic.vue'
 </script>
 
